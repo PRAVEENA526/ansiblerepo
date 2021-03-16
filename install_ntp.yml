@@ -1,0 +1,16 @@
+---
+- hosts: webserver
+#  gather_facts: false
+  become: yes
+# vars: 
+#   ansible_become_pass: pra123456
+  tasks:
+   - name: install ntp
+     yum:
+       name: ntp
+       state: present
+   - name: start ntp service
+     service:
+       name: ntpd
+       state: started
+...
