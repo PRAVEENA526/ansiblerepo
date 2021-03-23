@@ -1,6 +1,5 @@
 ---
-- hosts: webserver
-  become: yes
+- hosts: webserver 
   tasks:
     - name: Install tomcat tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp
       yum:
