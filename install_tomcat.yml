@@ -8,6 +8,7 @@
 
     - name: Start the tomcat service
       service:
+        become: yes
         name: tomcat
         state: started
 
